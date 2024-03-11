@@ -2,7 +2,7 @@
 
 namespace TestBackend.Models
 {
-    public class IssueModel
+    public class tblIssue
     {
         [Key]
         public int IssueId { get; set; }
@@ -10,8 +10,9 @@ namespace TestBackend.Models
         public string Problem { get; set; }
         public string? PartsNeed { get; set; }
         public string? PartsPrice { get; set; }
+        public string? Description { get; set; }
 
-        public CustomerModel CustomerModel { get; set; }
+        public tblCustomerList CustomerModel { get; set; }
 
     }
 }

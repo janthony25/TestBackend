@@ -2,7 +2,7 @@
 
 namespace TestBackend.Models
 {
-    public class CustomerModel
+    public class tblCustomerList
     {
         [Key]
         public int CustomerId { get; set; }
@@ -15,7 +15,12 @@ namespace TestBackend.Models
         [Required]
         public string CarRego { get; set; }
 
-        public ICollection<IssueModel> Issue { get; set; }
+        public string Paid { get; set; }
+        public string WorkStatus { get; set; }
+        
+
+
+        public ICollection<tblIssue> Issue { get; set; }
 
     }
 }

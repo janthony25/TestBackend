@@ -10,7 +10,20 @@ namespace TestBackend.Data
             
         }
 
-        public DbSet<CustomerModel> Customers { get; set; }
-        public DbSet<IssueModel> Issues { get; set; }
+        public DbSet<tblCustomerList> Customers { get; set; }
+        public DbSet<tblIssue> Issues { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<tblCustomerList>(entity =>
+            {
+                entity.HasKey(e => e.CustomerId);
+                
+            }
+            );
+                
+            base.OnModelCreating(modelBuilder);
+
+        }
     }
 }
